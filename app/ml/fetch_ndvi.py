@@ -17,7 +17,7 @@ def get_sentinel_token():
     if response.status_code == 200:
         return response.json()['access_token']
     else:
-        print("Sentinel auth error:", response.text)
+        # print("Sentinel auth error:", response.text)
         return None
 
 def get_ndvi(lat, lon):
@@ -75,5 +75,5 @@ def get_ndvi(lat, lon):
     if response.status_code == 200:
         return 0.75  # placeholder NDVI value
     else:
-        print("NDVI fetch failed:", response.text)
+        # print("NDVI fetch failed:", response.text)
         return None
